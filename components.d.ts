@@ -7,8 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    LinuxIcon: typeof import('./src/components/icons/LinuxIcon.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VanCard: typeof import('vant/es')['Card']
+    VanConfigProvider: typeof import('vant/es')['ConfigProvider']
+    VanTag: typeof import('vant/es')['Tag']
     VCharts: typeof import('./src/components/VCharts/VCharts.vue')['default']
+    WindowsIcon: typeof import('./src/components/icons/WindowsIcon.vue')['default']
   }
 }

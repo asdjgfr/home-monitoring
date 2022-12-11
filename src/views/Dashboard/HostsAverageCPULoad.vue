@@ -1,6 +1,6 @@
 <template>
   <div class="h-20">
-    <VCharts :extensions="extensions" ref="chart"></VCharts>
+    <VCharts :extensions="extensions" ref="chart" theme="dark"></VCharts>
   </div>
 </template>
 

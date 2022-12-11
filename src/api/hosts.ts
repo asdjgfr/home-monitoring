@@ -1,5 +1,6 @@
 import { get, prometheusUrl } from "@/api/index";
 import { isNil } from "lodash";
+import type { Host } from "@/api/host.d";
 
 const hostJobMap = new Map([
   [
@@ -21,19 +22,10 @@ const hostJobMap = new Map([
 export async function getUpHosts() {
   return (
     await get<{
-      result: {
-        metric: {
-          instance: string;
-          job: string;
-          __name__: string;
-        };
-        value: [number, string];
-      }[];
+      result: Host[];
       resultType: string;
     }>(`${prometheusUrl}/query`, { params: { query: "up" } })
-  ).data.result
-    .filter((item) => item.value[1] === "1" && hostJobMap.has(item.metric.job))
-    .map((item) => item.metric);
+  ).data.result.filter((item) => hostJobMap.has(item.metric.job));
 }
 
 export async function getHostCPU(instance: string, job: string) {
@@ -44,14 +36,7 @@ export async function getHostCPU(instance: string, job: string) {
 
   const res = (
     await get<{
-      result: {
-        metric: {
-          instance: string;
-          job: string;
-          __name__: string;
-        };
-        value: [number, string];
-      }[];
+      result: Host[];
       resultType: string;
     }>(`${prometheusUrl}/query`, {
       params: {
