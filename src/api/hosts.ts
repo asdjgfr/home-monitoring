@@ -1,6 +1,6 @@
 import { get, prometheusUrl } from "@/api/index";
-import { isNil } from "lodash";
-import type { Host } from "@/api/host.d";
+import { isNil } from "lodash-es";
+import type { Host } from "@/api/hosts.d";
 
 const hostJobMap = new Map([
   [

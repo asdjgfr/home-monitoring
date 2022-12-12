@@ -1,11 +1,9 @@
 import { ipcMain } from "electron";
 import axios from "axios";
 
-const pattern = /^(http:\/\/|https:\/\/|\/\/)/;
-
-export function main() {
+export function initApi() {
   const instance = axios.create({
-    timeout: 1000,
+    timeout: 3000,
   });
 
   ipcMain.handle("get", async (event, ...args) => {

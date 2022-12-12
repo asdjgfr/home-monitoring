@@ -1,6 +1,7 @@
 import { ipcRenderer } from "electron";
 
-export const prometheusUrl = "http://192.168.31.220:9090/api/v1";
+export const prometheusBaseUrl = "http://192.168.31.220:9090";
+export const prometheusUrl = `${prometheusBaseUrl}/api/v1`;
 export async function get<T = any>(
   url: string,
   config?: { params: Record<string, unknown> }

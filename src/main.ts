@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "@/assets/style/index.scss";
+import "vant/es/notify/style";
 import App from "./App.vue";
 import router from "@/router";
 

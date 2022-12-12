@@ -12,7 +12,7 @@ import {
   watch,
 } from "vue";
 import * as echarts from "echarts/core";
-import { cloneDeep, debounce, isNil } from "lodash";
+import { cloneDeep, debounce, isNil } from "lodash-es";
 import { CanvasRenderer } from "echarts/renderers";
 import darkCustom from "./themes/dark-custom";
 import type { EChartsType } from "echarts";

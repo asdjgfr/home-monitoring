@@ -1,0 +1,27 @@
+productName: home-monitoring
+appId: com.2077tech.home.monitoring
+copyright: 2077tech
+directories:
+  output: "release/${version}"
+files:
+  - dist-electron
+  - dist
+nsis:
+  oneClick: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  installerIcon: public/favicon.ico
+  installerHeaderIcon: public/favicon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: home-monitoring
+  deleteAppDataOnUninstall: false
+win:
+  icon: public/favicon.ico
+  artifactName: "${productName}_${version}_${arch}_${os}_portable.${ext}"
+  target:
+    - target: portable
+      arch:
+        - ia32
+        - x64
+        - arm64
