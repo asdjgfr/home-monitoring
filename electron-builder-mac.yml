@@ -10,8 +10,11 @@ mac:
   icon: public/favicon.png
   artifactName: "${productName}_${version}_${arch}_${os}.${ext}"
   target:
-    - target: default
+    - target: zip
       arch:
         - arm64
         - x64
-    - dmg
+    - target: dmg
+      arch:
+        - arm64
+        - x64
