@@ -78,7 +78,6 @@ async function loadData() {
 
     activeId.value =
       [...hostMap.values()].find((h) => h.value[1] === "1")?.id ?? null;
-    console.log(hostMap);
   } catch (e) {
     showNotify({ type: "danger", message: `主机获取失败：${e}` });
   }
