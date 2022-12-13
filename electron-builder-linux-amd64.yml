@@ -9,10 +9,8 @@ files:
 linux:
   icon: public/icons
   artifactName: "${productName}_${version}_${arch}_${os}.${ext}"
+  maintainer: "liu <liunian@2077tech.com>"
   target:
-    - target: default
+    - target: deb
       arch:
         - x64
-        - arm64
-        - armv7l
-    - AppImage

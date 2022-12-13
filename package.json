@@ -11,7 +11,8 @@
     "build:browser": "vite build",
     "build:win-setup": "electron-builder --win --config electron-builder-win-setup.yml",
     "build:win-portable": "electron-builder --win --config electron-builder-win-portable.yml",
-    "build:linux": "electron-builder --linux --config electron-builder-linux.yml",
+    "build:linux-amd64": "electron-builder --linux --config electron-builder-linux-amd64.yml",
+    "build:linux-arm": "electron-builder --linux --config electron-builder-linux-arm.yml",
     "build:mac": "electron-builder --mac --config electron-builder-mac.yml"
   },
   "engines": {

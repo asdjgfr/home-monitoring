@@ -1,0 +1,17 @@
+productName: home-monitoring
+appId: com.2077tech.home.monitoring
+copyright: 2077tech
+directories:
+  output: "release/${version}"
+files:
+  - dist-electron
+  - dist
+linux:
+  icon: public/icons
+  artifactName: "${productName}_${version}_${arch}_${os}.${ext}"
+  maintainer: "liu <liunian@2077tech.com>"
+  target:
+    - target: deb
+      arch:
+        - arm64
+        - armv7l
