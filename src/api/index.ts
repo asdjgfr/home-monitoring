@@ -1,6 +1,6 @@
 import { ipcRenderer } from "electron";
 
-export const prometheusBaseUrl = "http://192.168.31.220:9090";
+export const prometheusBaseUrl = import.meta.env.VITE_PROMETHEUS_URL;
 export const prometheusUrl = `${prometheusBaseUrl}/api/v1`;
 export async function get<T = any>(
   url: string,
