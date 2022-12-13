@@ -57,6 +57,7 @@ const url = computed(() => {
       }&var-hostname=All&kiosk&refresh=5s`;
       break;
     case "node_exporter":
+    case "mac_node_exporter":
       url = `/d/aka/1-node-exporter-dashboard-22-04-13-consulmanagerzi-dong-tong-bu-ban?orgId=1&var-instance=${
         currentHost.value!.metric.instance.split(":")[0]
       }&kiosk&refresh=5s`;

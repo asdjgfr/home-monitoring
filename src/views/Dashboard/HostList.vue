@@ -32,7 +32,7 @@ import type { Host } from "@/api/hosts.d";
 import WindowsIcon from "@/assets/icons/windows_11.svg";
 import LinuxIcon from "@/assets/icons/linux.svg";
 import QuestionIcon from "@/assets/icons/question.svg";
-import { ipcRenderer } from "electron";
+import AppleIcon from "@/assets/icons/apple.svg";
 
 interface IHost extends Host {
   id: symbol;
@@ -69,6 +69,8 @@ async function loadData() {
               return WindowsIcon;
             case "node_exporter":
               return LinuxIcon;
+            case "mac_node_exporter":
+              return AppleIcon;
             default:
               return QuestionIcon;
           }
