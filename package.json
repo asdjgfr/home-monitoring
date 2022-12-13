@@ -12,7 +12,7 @@
     "build:win-setup": "electron-builder --win --config electron-builder-win-setup.yml",
     "build:win-portable": "electron-builder --win --config electron-builder-win-portable.yml",
     "build:linux-amd64": "electron-builder --linux --config electron-builder-linux-amd64.yml",
-    "build:linux-arm": "electron-builder --linux --config electron-builder-linux-arm.yml",
+    "build:linux-arm": "cross-env USE_SYSTEM_FPM=\"true\" electron-builder --linux --config electron-builder-linux-arm.yml",
     "build:mac": "electron-builder --mac --config electron-builder-mac.yml"
   },
   "engines": {
@@ -32,6 +32,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/tsconfig": "^0.1.3",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "electron": "^22.0.0",
     "electron-builder": "^23.6.0",
     "postcss": "^8.4.19",
