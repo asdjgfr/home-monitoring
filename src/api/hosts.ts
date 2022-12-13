@@ -7,7 +7,14 @@ const hostJobMap = new Map([
     "node_exporter",
     {
       query: (instance: string, job: string) =>
-        `(sum by(instance) (irate(node_cpu_seconds_total{instance="${instance}",job="${job}", mode!="idle"}[2m])) / on(instance) group_left sum by (instance)((irate(node_cpu_seconds_total{instance="${instance}",job="${job}"}[5m])))) * 100`,
+          `(sum by(instance) (irate(node_cpu_seconds_total{instance="${instance}",job="${job}", mode!="idle"}[2m])) / on(instance) group_left sum by (instance)((irate(node_cpu_seconds_total{instance="${instance}",job="${job}"}[5m])))) * 100`,
+    },
+  ],
+  [
+    "mac_node_exporter",
+    {
+      query: (instance: string, job: string) =>
+          `(sum by(instance) (irate(node_cpu_seconds_total{instance="${instance}",job="${job}", mode!="idle"}[2m])) / on(instance) group_left sum by (instance)((irate(node_cpu_seconds_total{instance="${instance}",job="${job}"}[5m])))) * 100`,
     },
   ],
   [
