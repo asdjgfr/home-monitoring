@@ -32,7 +32,7 @@ const options: Option[][] = [
     { name: "刷新", icon: reloadIcon, action: "reload" },
     { name: "切换全屏", icon: fullscreenIcon, action: "fullscreen" },
     {
-      name: "重载 Prometheus",
+      name: "重载 Prometheus 配置",
       icon: reloadPrometheusIcon,
       action: "reloadPrometheus",
     },
