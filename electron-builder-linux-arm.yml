@@ -11,7 +11,12 @@ linux:
   artifactName: "${productName}_${version}_${arch}_${os}.${ext}"
   maintainer: "liu <liunian@2077tech.com>"
   target:
+    - target: Appimage
+      arch:
+        - arm64
+        - armv7l
     - target: deb
       arch:
         - arm64
         - armv7l
+
