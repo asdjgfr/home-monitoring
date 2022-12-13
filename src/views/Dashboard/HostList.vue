@@ -29,10 +29,10 @@ import { onMounted, reactive, ref } from "vue";
 import { getUpHosts } from "@/api/hosts";
 import { showNotify } from "vant";
 import type { Host } from "@/api/hosts.d";
-import WindowsIcon from "@/assets/icons/windows_11.svg";
-import LinuxIcon from "@/assets/icons/linux.svg";
+import WindowsIcon from "@/assets/icons/windows 11.png";
+import LinuxIcon from "@/assets/icons/linux.png";
 import QuestionIcon from "@/assets/icons/question.svg";
-import AppleIcon from "@/assets/icons/apple.svg";
+import AppleIcon from "@/assets/icons/apple.png";
 
 interface IHost extends Host {
   id: symbol;
