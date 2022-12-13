@@ -54,12 +54,12 @@ const url = computed(() => {
     case "windows_exporter":
       url = `/d/Kdh0OoSGz/1-windows_exporter-for-prometheus-dashboard-cn-v20201012?orgId=1&var-job=windows_exporter&var-instance=${
         currentHost.value!.metric.instance
-      }&var-hostname=All&kiosk`;
+      }&var-hostname=All&kiosk&refresh=5s`;
       break;
     case "node_exporter":
       url = `/d/aka/1-node-exporter-dashboard-22-04-13-consulmanagerzi-dong-tong-bu-ban?orgId=1&var-instance=${
         currentHost.value!.metric.instance.split(":")[0]
-      }&kiosk`;
+      }&kiosk&refresh=5s`;
       break;
   }
   return `${baseUrl}${url}`;
