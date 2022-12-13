@@ -1,14 +1,13 @@
 productName: home-monitoring
 appId: com.2077tech.home.monitoring
 copyright: 2077tech
-category: Utility
 directories:
   output: "release/${version}"
 files:
   - dist-electron
   - dist
 linux:
-  icon: public/favicon.png
+  icon: public/icons
   artifactName: "${productName}_${version}_${arch}_${os}.${ext}"
   target:
     - target: default

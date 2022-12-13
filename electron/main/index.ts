@@ -48,7 +48,7 @@ async function createWindow() {
     title: "Main window",
     width: 1024,
     height: 600,
-    icon: join(process.env.PUBLIC, "favicon.ico"),
+    icon: join(process.env.PUBLIC, "favicon.png"),
     fullscreen: true,
     webPreferences: {
       preload,
