@@ -19,6 +19,7 @@
 import type { Host } from "@/api/hosts.d";
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 import { isNil, debounce } from "lodash-es";
+import { hackGrafanaTheme } from "@/utils";
 
 interface IHost extends Host {
   id: symbol;
@@ -68,6 +69,7 @@ const url = computed(() => {
 
 async function handleLoad() {
   await nextTick();
+  hackGrafanaTheme(iframeRef.value!, "dark");
 }
 </script>
 

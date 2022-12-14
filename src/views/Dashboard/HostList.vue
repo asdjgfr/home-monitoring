@@ -7,6 +7,8 @@
         'cursor-pointer': host.value[1] === '1',
         'cursor-not-allowed': host.value[1] === '0',
       }"
+      style="margin-top: var(--van-padding-xs)"
+      class="!bg-slate-800 host-list-item"
       :key="host.id"
       :desc="host.metric.instance"
       :title="host.name"
@@ -106,9 +108,14 @@ defineExpose({
 
 .host-list {
   @apply shadow-xl flex overflow-x-auto gap-3 p-3 mb-5;
+
+  .host-list-item {
+    @apply transition;
+  }
   .active {
-    @apply bg-slate-900;
-    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 10%);
+    @apply bg-sky-300/[0.15] #{!important};
+    box-shadow: inset 0 0 0 2px hsl(0deg 0% 100% / 10%);
+    @apply scale-105;
   }
 }
 </style>
