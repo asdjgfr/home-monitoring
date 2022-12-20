@@ -53,13 +53,14 @@ const url = computed(() => {
   let url = "";
   switch (currentHost.value!.metric.job) {
     case "windows_exporter":
-      url = `/d/Kdh0OoSGz/1-windows_exporter-for-prometheus-dashboard-cn-v20201012?orgId=1&var-job=windows_exporter&var-instance=${
+      url = `/d/Kdh0OoSGz/windows_exporter?orgId=1&var-job=windows_exporter&var-instance=${
         currentHost.value!.metric.instance
       }&var-hostname=All&kiosk&refresh=5s`;
       break;
     case "node_exporter":
     case "mac_node_exporter":
-      url = `/d/aka/1-node-exporter-dashboard-22-04-13-consulmanagerzi-dong-tong-bu-ban?orgId=1&var-instance=${
+    case "router_node_exporter":
+      url = `/d/aka/node-exporter?orgId=1&var-instance=${
         currentHost.value!.metric.instance.split(":")[0]
       }&kiosk&refresh=5s`;
       break;

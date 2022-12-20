@@ -35,6 +35,7 @@ import WindowsIcon from "@/assets/icons/windows 11.png";
 import LinuxIcon from "@/assets/icons/linux.png";
 import QuestionIcon from "@/assets/icons/question.svg";
 import AppleIcon from "@/assets/icons/apple.png";
+import RouterIcon from "@/assets/icons/router.png";
 
 interface IHost extends Host {
   id: symbol;
@@ -73,6 +74,8 @@ async function loadData() {
               return LinuxIcon;
             case "mac_node_exporter":
               return AppleIcon;
+            case "router_node_exporter":
+              return RouterIcon;
             default:
               return QuestionIcon;
           }
